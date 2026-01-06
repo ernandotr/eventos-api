@@ -1,5 +1,6 @@
 package com.eventosapp.models;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -8,13 +9,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotEmpty;
 
 
 @Entity
 public class Evento implements Serializable{
 	
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
